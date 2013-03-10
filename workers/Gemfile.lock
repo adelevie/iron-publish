@@ -1,0 +1,23 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    iron_core (0.5.2)
+      rest (>= 2.2.0)
+    iron_worker_ng (0.12.2)
+      bundler (>= 1.0.0)
+      iron_core (>= 0.4.2)
+      rubyzip (>= 0.9.9)
+    mime-types (1.21)
+    net-http-persistent (2.8)
+    rest (2.2.0)
+      net-http-persistent
+      rest-client (>= 0.3.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rubyzip (0.9.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  iron_worker_ng
