@@ -1,17 +1,17 @@
 require 'iron_worker_ng'
-require_relative '../configuration'
+require_relative 'configuration'
  
 config = Configuration.keys
- 
-client = IronWorkerNG::Client.new(:token => config['ironio']['token'], :project_id => config['ironio']['project_id'])
+
+p token = config["ironio"]["token"]
+p project_id = config["ironio"]["project_id"]
+client = IronWorkerNG::Client.new(:token => token, :project_id => project_id)
  
 code = IronWorkerNG::Code::Ruby.new
 code.merge_worker 'publish.rb'
-code.merge_file '../configuration.rb'
-#code.merge_gem 'jekyll'
+code.merge_file 'configuration.rb'
+code.merge_gem 'jekyll'
 code.merge_gem 'jekyll-s3'
-
-#foo
  
 client.codes.create(code)
  

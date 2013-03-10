@@ -28,9 +28,6 @@ open('_jekyll_s3.yml', 'w') { |f|
 p "done writing _jekyll-s3.yml file:"
 p `cat _jekyll_s3.yml`
 
-p "install jekyll gem"
-p `gem install jekyll`
-
 p "generating jekyll pages"
 
 p `/task/__gems__/gems/jekyll-0.12.1/bin/jekyll --no-auto`
