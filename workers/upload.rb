@@ -10,7 +10,7 @@ client = IronWorkerNG::Client.new(:token => token, :project_id => project_id)
 code = IronWorkerNG::Code::Ruby.new
 code.merge_worker 'publish.rb'
 code.merge_file 'configuration.rb'
-code.merge_gem 'jekyll'
+#code.merge_gem 'jekyll'
 code.merge_gem 'jekyll-s3'
  
 client.codes.create(code)
