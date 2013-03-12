@@ -19,7 +19,7 @@ p "changing repo"
 Dir.chdir(repo_name)
 p "done changing repo"
 
-p `gem install jekyll`
+#p `gem install jekyll`
 
 p "writing _jekyll_s3.yml file"
 open('_jekyll_s3.yml', 'w') { |f|
